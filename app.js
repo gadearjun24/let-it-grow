@@ -39,10 +39,11 @@ app.use(logger("dev"));
 // CORS middleware to enable cross-origin requests
 app.use(
   cors({
-    origin: "*", // Ensure this matches your frontend's URL
-    methods: ["GET", "POST", "PUT", "DELETE"], // Methods you want to allow
-    allowedHeaders: ["Content-Type", "Authorization"], // Headers you want to allow
-    credentials: true, // Enable cookies to be sent with the requests
+    origin:
+      "https://sturdy-space-computing-machine-4j7qq7qjwgrqcq7jv-3000.app.github.dev", // Set the allowed origin explicitly
+    methods: ["GET", "POST", "PUT", "DELETE"], // Allowed methods
+    allowedHeaders: ["Content-Type", "Authorization"], // Allowed headers
+    credentials: true, // Allow credentials (cookies, auth tokens)
   })
 );
 // Body parser middleware to handle JSON requests
