@@ -39,11 +39,12 @@ app.use(logger("dev"));
 // CORS middleware to enable cross-origin requests
 app.use(
   cors({
-    origin: "*", // Allow specified origin or any origin
-    credentials: true, // Allow sending cookies
+    origin: "*", // Ensure this matches your frontend's URL
+    methods: ["GET", "POST", "PUT", "DELETE"], // Methods you want to allow
+    allowedHeaders: ["Content-Type", "Authorization"], // Headers you want to allow
+    credentials: true, // Enable cookies to be sent with the requests
   })
 );
-
 // Body parser middleware to handle JSON requests
 app.use(express.json());
 
