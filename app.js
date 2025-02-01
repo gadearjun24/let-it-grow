@@ -41,7 +41,7 @@ app.use(
   cors({
     origin:
       "https://sturdy-space-computing-machine-4j7qq7qjwgrqcq7jv-3000.app.github.dev", // Set the allowed origin explicitly
-    methods: ["GET", "POST", "PUT", "DELETE"], // Allowed methods
+    methods: ["GET", "POST", "PUT", "DELETE" , "OPTIONS"], // Allowed methods
     allowedHeaders: ["Content-Type", "Authorization"], // Allowed headers
     credentials: true, // Allow credentials (cookies, auth tokens)
   })
